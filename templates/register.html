@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+    <h2>Создайте учетную запись</h2>
+    {% block content %}
+    <form action="/register" method="POST">
+        <div>
+            <input name="login" type="text"  value="" placeholder="LOGIN" required>
+        </div>
+        <div>
+            <input name="display_name" type="text" value="" placeholder="Имя" required>
+        </div>
+        <div>
+            <input name="mail" type="text" value="" placeholder="MAIL ADRESS" required>
+        </div>
+        <div>
+            <input name="bithday" type="date" required placeholder="DATE OF BORN">
+        </div>
+        <div>
+            <input name="password" type="password" required placeholder="Пароль">
+        </div>
+        <div>
+            <input name="validPassword" type="password" required placeholder="Повторите пароль">
+        </div>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    {% endblock %}

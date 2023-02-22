@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS users(
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    login TEXT NOT NULL,
+    display_name TEXT NOT NULL,
+    mail TEXT NOT NULL,
+    password TEXT NOT NULL,
+    account_img TEXT,
+    bithday DATE
+);
+
+CREATE TABLE IF NOT EXISTS posts(
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    user INTEGER NOT NULL,
+    text TEXT, 
+    created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (user) REFERENCES users (id)
+);
+
+CREATE TRIGGER IF NOT EXISTS on_update_post 
+AFTER UPDATE on posts
+BEGIN
+    UPDATE posts set updated = DATETIME("now", "localtime") WHERE id = NEW.id;
+END;

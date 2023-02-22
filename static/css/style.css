@@ -1,0 +1,67 @@
+/* form{
+    background-color: black;
+    color:white;
+}
+
+.flash{
+    border:1px solid red;
+    background: pink;
+} */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.container-post {
+    padding: 10px;
+    margin: 10px;
+    border: solid rgb(23, 190, 220);
+    display:block;
+
+}
+
+
+.container-post time {
+    right: 10px;
+}
+
+.nav-btn {
+    display: inline;
+    float: right;
+    background-color: rgb(9, 27, 50);
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;    
+    font-size: 17px;
+
+}
+.nav-btn:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+.bar {
+    background-color: #333;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    /* overflow - определяет то что будет происходить с обьектом внутри тега */
+}
+.nav-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    height: 100%;
+    padding: 8px;
+    margin: 5px;
+    
+
+}
+.nav-logo span{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

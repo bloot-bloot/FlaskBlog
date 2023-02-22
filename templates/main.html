@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+    {% block js %}
+        
+    {% endblock %}
+{% block content %}
+    <div class="content">
+        <div>
+            <form id="posting" method="POST" action="/posts">
+                <input type="hidden" name="dp_name" value={{name}}>
+                <input type="hidden" name="id" value="{{id}}">
+                <textarea rows="2" cols="45" name="post_text" type="text" placeholder="Введите текст"></textarea>
+                <input type="submit" value="отправить">
+            </form>
+        </div>
+     
+        
+        <div id = "posts">
+          
+        </div>
+    </div>
+{% endblock %}
+    {% block js_bottom %}
+        <script src="{{url_for('static', filename='js/posting.js')}}"></script>
+    {% endblock %}
